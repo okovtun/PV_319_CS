@@ -1,6 +1,11 @@
 https://github.com/okovtun/PV_319_CS.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIMOeBXntpzrkXXExMu44-Cr
 
+TODO:
+¬ проекте 'Snake' реализовать игру, в которой при нажатии клавиш WASD или клавиш курсора (стрелки)
+курсор ездит по экрану;
+
+DONE:
 
 DataTypes:
 https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types
