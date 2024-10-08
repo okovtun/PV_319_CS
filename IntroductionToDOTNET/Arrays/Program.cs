@@ -1,6 +1,6 @@
-﻿#define ARRAYS_1
-#define ARRAYS_2
-//#define JAGGED_ARRAYS
+﻿//#define ARRAYS_1
+//#define ARRAYS_2
+#define JAGGED_ARRAYS
 
 using System;
 using System.Collections.Generic;
@@ -66,6 +66,40 @@ namespace Arrays
 				}
 				Console.WriteLine();
 			}
+			Console.WriteLine();
+
+			//////////////////////////////////////
+
+			for (int i = 0; i < i_arr_2.GetLength(0); i++)
+			{
+				for (int j = 0; j < i_arr_2.GetLength(1); j++)
+				{
+					for (int k = i; k < i_arr_2.GetLength(0); k++)
+					{
+						for (int l = k == i ? j + 1 : 0; l < i_arr_2.GetLength(1); l++)
+						{
+							if (i_arr_2[k, l] < i_arr_2[i, j])
+							{
+								//(i_arr_2[k, l], i_arr_2[i, j]) = (i_arr_2[i, j], i_arr_2[k, l]);
+								int buffer = i_arr_2[i, j];
+								i_arr_2[i, j] = i_arr_2[k, l];
+								i_arr_2[k, l] = buffer;
+							}
+						}
+					}
+				}
+			}
+
+			//////////////////////////////////////
+			for (int i = 0; i < i_arr_2.GetLength(0); i++)
+			{
+				for (int j = 0; j < i_arr_2.GetLength(1); j++)
+				{
+					Console.Write(i_arr_2[i, j] + "\t");
+				}
+				Console.WriteLine();
+			}
+			Console.WriteLine();
 
 			foreach (int i in i_arr_2)
 			{
@@ -81,10 +115,10 @@ namespace Arrays
 
 			int[][] arr_jagged = new int[][]
 				{
-					new int[]{ 0, 1, 1, 2 },
+					new int[]{ 34, 610,55, 89 },
+					new int[]{ 144, 1, 1,233, 377,  987 },
 					new int[]{ 3, 5, 8, 13, 21 },
-					new int[]{ 34, 55, 89 },
-					new int[]{ 144, 233, 377, 610, 987 }
+					new int[]{ 0,  2 },
 				};
 			for (int i = 0; i < arr_jagged.Length; i++)
 			{
@@ -93,7 +127,38 @@ namespace Arrays
 					Console.Write(arr_jagged[i][j] + "\t");
 				}
 				Console.WriteLine();
-			} 
+			}
+			Console.WriteLine();
+
+			for (int i = 0; i < arr_jagged.Length; i++)
+			{
+				for (int j = 0; j < arr_jagged[i].Length; j++)
+				{
+					for (int k = i; k < arr_jagged.Length; k++)
+					{
+						for (int l = k == i ? j + 1 : 0; l < arr_jagged[k].Length; l++)
+						{
+							if (arr_jagged[k][l] < arr_jagged[i][j])
+							{
+								//(i_arr_2[k, l], i_arr_2[i, j]) = (i_arr_2[i, j], i_arr_2[k, l]);
+								int buffer = arr_jagged[i][j];
+								arr_jagged[i][j] = arr_jagged[k][l];
+								arr_jagged[k][l] = buffer;
+							}
+						}
+					}
+				}
+			}
+
+			for (int i = 0; i < arr_jagged.Length; i++)
+			{
+				for (int j = 0; j < arr_jagged[i].Length; j++)
+				{
+					Console.Write(arr_jagged[i][j] + "\t");
+				}
+				Console.WriteLine();
+			}
+			Console.WriteLine();
 #endif
 
 		}
