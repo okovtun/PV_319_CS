@@ -2,6 +2,12 @@ https://github.com/okovtun/PV_319_CS.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIMOeBXntpzrkXXExMu44-Cr
 
 TODO:
+Дополнить нашу иерархию следующими классами:
+	Square;
+	Circle;
+	Triangle;
+
+DONE:
 1. Добавить в иерархию класс 'Graduate' (Дипломник);
 2. Создать массив людей 'group' и вывести его на экран;
 3. Сохранить группу в файл;
