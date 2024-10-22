@@ -2,6 +2,9 @@ https://github.com/okovtun/PV_319_CS.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIMOeBXntpzrkXXExMu44-Cr
 
 TODO:
+Добавить в иерархию прямоугольные треугольники.
+
+DONE:
 1. Написать и применить интерфейс IHaveDiameter;
 2. Дополнить нашу иерархию следующими классами:
 	Square;
